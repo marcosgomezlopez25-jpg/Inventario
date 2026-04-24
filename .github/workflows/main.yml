@@ -19,8 +19,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Compile project
-      run: javac src/*.java
+    - name: Compile Java files
+      run: javac *.java
 
-    - name: Run tests
-      run: java org.junit.runner.JUnitCore InventarioTest
+    - name: Run test
+      run: java InventarioTest
