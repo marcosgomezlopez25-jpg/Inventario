@@ -1,0 +1,23 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Descargar proyecto
+      uses: actions/checkout@v4
+
+    - name: Instalar Java
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Compilar archivos Java
+      run: javac Inventario.java InventarioTest.java
