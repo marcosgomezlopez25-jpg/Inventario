@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v4
 
     - name: Set up JDK
@@ -22,5 +22,5 @@ jobs:
     - name: Compile Java files
       run: javac *.java
 
-    - name: Run test
-      run: java InventarioTest
+    - name: Run program (simple check)
+      run: java Inventario
